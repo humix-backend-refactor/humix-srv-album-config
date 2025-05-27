@@ -9,4 +9,4 @@ namespace: album
 images:
 - name: imagem
   newName: blgianini/humix
-  newTag: 1979f1f943a6ec8e7b9c75ee0eddad63d160ba10
+  newTag: 31197a920eaf9acbabd8750fa7085d234bc89f27
