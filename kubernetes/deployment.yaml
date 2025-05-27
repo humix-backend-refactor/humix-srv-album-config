@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: humix-srv-album
+spec:
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: humix-srv-album
+  template:
+    metadata:
+      labels:
+        app: humix-srv-album
+    spec:
+      containers:
+      - name: humix-srv-album
+        image: imagem
+        ports:
+        - containerPort: 8080
+        env:
+          - name: DB_HOST
+            value: "ep-shy-pond-a88cp7xz-pooler.eastus2.azure.neon.tech"
+          - name: DB_PORT
+            value: "5432"
+          - name: DB_USER
+            value: "neondb_owner"
+          - name: DB_PASS
+            value: "npg_jTOzam35HwXA"
+          - name: DB_NAME
+            value: "neondb"
+          - name: JWT_TOKEN
+            value: "jwt-humix-token"
+
